@@ -1,5 +1,5 @@
 /* ==========================================
-   AI記憶術 LP スタイルシート
+   AI記憶術® LP スタイルシート
    ========================================== */
 
 /* リセットと基本設定 */
@@ -38,6 +38,20 @@ a {
 }
 
 /* ==========================================
+   PRヘッダー
+   ========================================== */
+.pr-header {
+    background: #f5f5f5;
+    padding: 8px 15px;
+    text-align: left;
+}
+
+.pr-header span {
+    font-size: 11px;
+    color: #888;
+}
+
+/* ==========================================
    ヒーローセクション
    ========================================== */
 .hero {
@@ -70,14 +84,26 @@ a {
     background: linear-gradient(transparent 60%, #fff59d 60%);
 }
 
-.hero-image {
-    margin-top: 20px;
+.news-update {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
 }
 
-.hero-image img {
-    max-width: 90%;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+.news-badge {
+    background: #e74c3c;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 3px;
+}
+
+.news-date {
+    font-size: 13px;
+    color: #666;
 }
 
 /* ==========================================
@@ -118,362 +144,265 @@ a {
     padding: 30px 0;
 }
 
-.manga-panel {
-    margin-bottom: 30px;
+.manga-full-panel {
+    margin: 0;
 }
 
-.manga-image-container img {
+.manga-full-panel img {
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
 }
 
-.manga-placeholder {
-    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-    padding: 60px 20px;
-    border-radius: 8px;
-    text-align: center;
-    color: #666;
-    font-weight: 500;
-}
-
-.manga-placeholder.small {
-    padding: 40px 15px;
-    font-size: 14px;
-}
-
-/* 間違った勉強法セクション */
-.wrong-method {
+.manga-story {
     background: #fff;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 30px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
-.character-speech {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 25px;
-}
-
-.character-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    overflow: hidden;
-    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.character-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.speech-bubble {
-    background: #f0f0f0;
-    padding: 15px 20px;
-    border-radius: 15px;
-    position: relative;
-    flex-grow: 1;
-}
-
-.speech-bubble::before {
-    content: '';
-    position: absolute;
-    left: -10px;
-    top: 20px;
-    border: 10px solid transparent;
-    border-right-color: #f0f0f0;
-    border-left: 0;
-}
-
-.speech-title {
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.red-text {
-    color: #ff4444;
-    font-weight: 900;
-}
-
-.x-marks {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.x-item {
-    background: #fff5f5;
-    border: 2px solid #ffcccc;
-    border-radius: 10px;
-    padding: 20px 15px;
-    text-align: center;
-}
-
-.x-mark {
-    font-size: 48px;
-    color: #ff4444;
-    font-weight: 900;
-    line-height: 1;
-    margin-bottom: 10px;
-}
-
-.x-item p {
-    font-size: 14px;
-    font-weight: 700;
-    color: #666;
-}
-
-/* マンガパネルグリッド */
-.manga-panels-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.manga-panel-item img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* 脳セクション */
-.brain-section {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.brain-image img {
-    max-width: 200px;
-}
-
-.brain-placeholder {
-    padding: 30px;
-}
-
-.brain-placeholder span {
-    font-size: 60px;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.brain-placeholder p {
-    color: #666;
-    font-weight: 500;
+.manga-success {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
 }
 
 /* ==========================================
-   なぜセクション
+   共通スタイル
    ========================================== */
-.why-section {
-    background: #fff;
-    padding: 50px 0;
-    text-align: center;
-}
-
 .section-title {
     font-size: 20px;
     font-weight: 900;
     line-height: 1.6;
     margin-bottom: 30px;
     color: #222;
+    text-align: center;
 }
 
 .section-title.white {
     color: #fff;
 }
 
-.why-content p {
-    margin-bottom: 15px;
-    color: #555;
+.highlight-text {
+    color: #ff4444;
+    background: linear-gradient(transparent 60%, #fff59d 60%);
+}
+
+.red-text {
+    color: #ff4444;
+    font-weight: 700;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #fff9e6 0%, #fff5d6 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #ff6b35;
+    margin: 20px 0;
 }
 
 /* ==========================================
-   実績セクション
+   導入セクション
    ========================================== */
-.results-section {
-    background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
-    padding: 50px 0;
-    text-align: center;
-}
-
-.results-content {
-    margin-top: 20px;
-}
-
-.results-image img {
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.results-placeholder {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 60px 20px;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 18px;
-}
-
-/* ==========================================
-   簡単セクション
-   ========================================== */
-.easy-section {
-    background: #f5f5f5;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.easy-grid {
-    display: grid;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.easy-item {
+.intro-section {
     background: #fff;
-    padding: 30px 20px;
+    padding: 50px 0;
+}
+
+.intro-content {
+    text-align: left;
+}
+
+.intro-content p {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* ==========================================
+   開発者紹介セクション
+   ========================================== */
+.developer-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 50px 0;
+}
+
+.developer-story {
+    background: #fff;
+    padding: 25px;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
 }
 
-.easy-number {
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+.developer-story p {
+    margin-bottom: 15px;
+    color: #444;
+    line-height: 1.9;
+}
+
+.recommendation-box {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
     color: #fff;
-    font-size: 24px;
-    font-weight: 900;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 15px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
 }
 
-.easy-item h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #222;
-}
-
-.easy-item p {
-    font-size: 14px;
-    color: #666;
+.recommendation-box p {
+    font-size: 16px;
+    line-height: 1.7;
 }
 
 /* ==========================================
-   脳科学セクション
+   無料講座セクション
    ========================================== */
-.brain-science-section {
+.free-course-section {
     background: #fff;
     padding: 50px 0;
 }
 
-.brain-explanation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-}
-
-.brain-diagram {
+.free-course-box {
+    background: linear-gradient(135deg, #fff0f5 0%, #ffe4ec 100%);
+    padding: 30px 25px;
+    border-radius: 20px;
     text-align: center;
+    border: 3px dashed #ff6b35;
 }
 
-.brain-diagram img {
-    max-width: 250px;
-}
-
-.brain-diagram-placeholder {
-    background: linear-gradient(135deg, #e8f4f8 0%, #d4e9f7 100%);
-    padding: 40px;
-    border-radius: 50%;
-    text-align: center;
-}
-
-.brain-diagram-placeholder span {
-    font-size: 80px;
-    display: block;
-    margin-bottom: 15px;
-}
-
-.brain-diagram-placeholder p {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.6;
-}
-
-.brain-text {
-    text-align: center;
-}
-
-.brain-text h3 {
-    font-size: 18px;
+.free-label {
+    display: inline-block;
+    background: #ff4444;
+    color: #fff;
+    font-size: 12px;
     font-weight: 700;
+    padding: 5px 15px;
+    border-radius: 20px;
     margin-bottom: 15px;
-    color: #222;
 }
 
-.brain-text p {
+.free-course-box h3 {
+    font-size: 20px;
+    font-weight: 900;
+    color: #222;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.free-course-box p {
     font-size: 14px;
     color: #555;
-    margin-bottom: 10px;
+}
+
+/* ==========================================
+   7つのポイントセクション
+   ========================================== */
+.points-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    padding: 50px 0;
+    color: #fff;
+}
+
+.points-section .section-title {
+    color: #fff;
+}
+
+.points-section .highlight-text {
+    color: #ffd700;
+    background: none;
+}
+
+.points-list {
+    display: grid;
+    gap: 12px;
+}
+
+.point-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.point-number {
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.point-item p {
+    font-size: 15px;
+    color: #fff;
+    margin: 0;
+}
+
+.points-note {
+    margin-top: 25px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    line-height: 1.8;
 }
 
 /* ==========================================
    特典セクション
    ========================================== */
-.benefits-section {
-    background: linear-gradient(135deg, #fff9e6 0%, #fff5d6 100%);
+.bonus-section {
+    background: linear-gradient(135deg, #fff0f5 0%, #ffe4ec 100%);
     padding: 50px 0;
-    text-align: center;
 }
 
-.benefits-list {
-    max-width: 400px;
-    margin: 30px auto 0;
-    text-align: left;
-}
-
-.benefit-item {
-    display: flex;
-    align-items: center;
+.bonus-list {
+    display: grid;
     gap: 15px;
-    padding: 15px;
-    background: #fff;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
 }
 
-.check-mark {
-    width: 30px;
-    height: 30px;
-    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
-    color: #fff;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 50%;
+.bonus-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    border-left: 5px solid #ff6b35;
+}
+
+.bonus-icon {
+    font-size: 30px;
     flex-shrink: 0;
 }
 
-.benefit-item p {
+.bonus-content {
+    flex-grow: 1;
+}
+
+.bonus-number {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 15px;
+    margin-bottom: 8px;
+}
+
+.bonus-item h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.5;
+}
+
+.bonus-note {
+    text-align: center;
     font-size: 15px;
-    font-weight: 500;
-    color: #333;
+    color: #444;
+    line-height: 1.8;
 }
 
 /* ==========================================
@@ -496,11 +425,15 @@ a {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
-.cta-label {
-    font-size: 16px;
-    font-weight: 700;
-    color: #ff4444;
-    margin-bottom: 20px;
+.cta-final {
+    background: linear-gradient(135deg, #fff 0%, #fff9e6 100%);
+    border: 3px solid #ff6b35;
+}
+
+.cta-time {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
 }
 
 .cta-button {
@@ -514,6 +447,8 @@ a {
     box-shadow: 0 5px 20px rgba(255, 107, 53, 0.4);
     transition: all 0.3s ease;
     animation: pulse 2s infinite;
+    position: relative;
+    overflow: hidden;
 }
 
 .cta-button:hover {
@@ -530,14 +465,11 @@ a {
     }
 }
 
-.cta-notes {
-    margin-top: 20px;
-}
-
-.cta-notes p {
+.cta-note {
+    margin-top: 15px;
     font-size: 13px;
-    color: #666;
-    margin: 5px 0;
+    color: #ff4444;
+    font-weight: 700;
 }
 
 /* ==========================================
@@ -550,7 +482,7 @@ a {
 
 .faq-list {
     max-width: 500px;
-    margin: 30px auto 0;
+    margin: 0 auto 20px;
 }
 
 .faq-item {
@@ -566,17 +498,13 @@ a {
     align-items: center;
     gap: 15px;
     padding: 20px;
-    cursor: pointer;
-    transition: background 0.3s ease;
 }
 
-.faq-question:hover {
-    background: #f0f0f0;
-}
-
-.q-mark, .a-mark {
+.q-mark {
     width: 30px;
     height: 30px;
+    background: #ff6b35;
+    color: #fff;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -586,47 +514,120 @@ a {
     flex-shrink: 0;
 }
 
-.q-mark {
-    background: #ff6b35;
-    color: #fff;
-}
-
-.a-mark {
-    background: #4CAF50;
-    color: #fff;
-}
-
 .faq-question p {
     flex-grow: 1;
     font-weight: 700;
     font-size: 15px;
     color: #333;
-}
-
-.faq-toggle {
-    font-size: 24px;
-    color: #999;
-    transition: transform 0.3s ease;
-}
-
-.faq-item.active .faq-toggle {
-    transform: rotate(45deg);
+    margin: 0;
 }
 
 .faq-answer {
-    display: none;
+    display: flex;
     padding: 0 20px 20px;
     align-items: flex-start;
     gap: 15px;
 }
 
-.faq-item.active .faq-answer {
+.a-mark {
+    width: 30px;
+    height: 30px;
+    background: #4CAF50;
+    color: #fff;
+    border-radius: 50%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
 }
 
 .faq-answer p {
     font-size: 14px;
     color: #555;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.faq-note {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
+/* ==========================================
+   最後にセクション
+   ========================================== */
+.closing-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+    padding: 50px 0;
+}
+
+.closing-content {
+    text-align: left;
+}
+
+.closing-content p {
+    margin-bottom: 18px;
+    color: #444;
+    line-height: 1.9;
+}
+
+.closing-emphasis {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.closing-final {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+}
+
+/* ==========================================
+   筆者情報セクション
+   ========================================== */
+.author-section {
+    background: #fff;
+    padding: 40px 0;
+    border-top: 1px solid #eee;
+}
+
+.author-box {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.author-label {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.author-name {
+    font-size: 20px;
+    font-weight: 900;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.author-title {
+    font-size: 14px;
+    color: #ff6b35;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.author-bio {
+    font-size: 13px;
+    color: #666;
     line-height: 1.8;
 }
 
@@ -645,7 +646,6 @@ a {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    margin-bottom: 20px;
 }
 
 .footer-links a {
@@ -658,9 +658,23 @@ a {
     color: #fff;
 }
 
-.copyright {
-    font-size: 11px;
-    color: #666;
+/* ==========================================
+   リップルエフェクト
+   ========================================== */
+.cta-button .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
 }
 
 /* ==========================================
@@ -685,14 +699,6 @@ a {
         font-size: 17px;
     }
 
-    .x-marks {
-        grid-template-columns: 1fr;
-    }
-
-    .x-mark {
-        font-size: 36px;
-    }
-
     .cta-button {
         font-size: 16px;
         padding: 18px 30px;
@@ -700,6 +706,12 @@ a {
 
     .footer-links {
         flex-direction: column;
+        gap: 10px;
+    }
+
+    .point-item {
+        flex-direction: column;
+        align-items: flex-start;
         gap: 10px;
     }
 }
@@ -715,282 +727,5 @@ a {
 
     .section-title {
         font-size: 24px;
-    }
-
-    .easy-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .brain-explanation {
-        flex-direction: row;
-    }
-
-    .brain-text {
-        text-align: left;
-    }
-}
-
-/* ==========================================
-   リップルエフェクト
-   ========================================== */
-.cta-button {
-    position: relative;
-    overflow: hidden;
-}
-
-.cta-button .ripple {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
-    transform: scale(0);
-    animation: ripple-animation 0.6s linear;
-    pointer-events: none;
-}
-
-@keyframes ripple-animation {
-    to {
-        transform: scale(4);
-        opacity: 0;
-    }
-}
-
-/* ==========================================
-   マンガフルパネル
-   ========================================== */
-.manga-full-panel {
-    margin: 0;
-}
-
-.manga-full-panel img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
-}
-
-.manga-story {
-    background: #fff;
-}
-
-.manga-success {
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-}
-
-/* ==========================================
-   実績グリッド
-   ========================================== */
-.results-grid {
-    display: grid;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.result-card {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    padding: 25px 20px;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.result-icon {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.result-text {
-    color: #fff;
-    font-size: 16px;
-}
-
-.result-text strong {
-    display: block;
-    font-size: 20px;
-    margin-top: 5px;
-    color: #fff59d;
-}
-
-/* ==========================================
-   AI脳セクション
-   ========================================== */
-.ai-brain-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 30px;
-    background: linear-gradient(135deg, #e8f4f8 0%, #d4e9f7 100%);
-    border-radius: 20px;
-}
-
-.ai-robot {
-    font-size: 60px;
-    animation: float 3s ease-in-out infinite;
-}
-
-.arrow {
-    font-size: 40px;
-    color: #ff6b35;
-}
-
-.brain-icon {
-    font-size: 60px;
-    animation: pulse-brain 2s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-@keyframes pulse-brain {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-}
-
-/* ==========================================
-   お詫びセクション
-   ========================================== */
-.apology-section {
-    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
-    padding: 50px 0;
-}
-
-.apology-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-}
-
-.apology-image {
-    max-width: 250px;
-}
-
-.apology-image img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.apology-text {
-    text-align: center;
-}
-
-.apology-text p {
-    font-size: 16px;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-/* ==========================================
-   ボーナス特典セクション
-   ========================================== */
-.bonus-section {
-    background: linear-gradient(135deg, #fff0f5 0%, #ffe4ec 100%);
-    padding: 50px 0;
-    text-align: center;
-}
-
-.bonus-header {
-    max-width: 350px;
-    margin: 0 auto 30px;
-}
-
-.bonus-header img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.bonus-list {
-    display: grid;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.bonus-item {
-    background: #fff;
-    padding: 25px 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    text-align: left;
-    border-left: 5px solid #ff6b35;
-}
-
-.bonus-number {
-    display: inline-block;
-    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
-    color: #fff;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 5px 12px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-}
-
-.bonus-item h3 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #222;
-    margin-bottom: 8px;
-}
-
-.bonus-item p {
-    font-size: 14px;
-    color: #666;
-}
-
-/* ==========================================
-   CTA追加スタイル
-   ========================================== */
-.cta-subtitle {
-    font-size: 16px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
-
-.cta-headline {
-    font-size: 22px;
-    font-weight: 900;
-    color: #222;
-    margin-bottom: 15px;
-    line-height: 1.5;
-}
-
-.cta-subtext {
-    font-size: 15px;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.cta-final {
-    background: linear-gradient(135deg, #fff 0%, #fff9e6 100%);
-    border: 3px solid #ff6b35;
-}
-
-/* ==========================================
-   レスポンシブ追加
-   ========================================== */
-@media (min-width: 768px) {
-    .results-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .apology-content {
-        flex-direction: row;
-    }
-
-    .apology-text {
-        text-align: left;
     }
 }
