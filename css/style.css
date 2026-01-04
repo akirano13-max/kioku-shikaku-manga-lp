@@ -1,0 +1,755 @@
+/* ==========================================
+   AI記憶術 LP スタイルシート
+   ========================================== */
+
+/* リセットと基本設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    background-color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ==========================================
+   ヒーローセクション
+   ========================================== */
+.hero {
+    background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+    padding: 20px 0 30px;
+    text-align: center;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: linear-gradient(90deg, #ff6b35, #ff8c42);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.hero-title .highlight {
+    color: #ff4444;
+    background: linear-gradient(transparent 60%, #fff59d 60%);
+}
+
+.hero-image {
+    margin-top: 20px;
+}
+
+.hero-image img {
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================
+   警告セクション
+   ========================================== */
+.warning-section {
+    background: #333;
+    padding: 0;
+}
+
+.warning-tape {
+    background: repeating-linear-gradient(
+        45deg,
+        #ffcc00,
+        #ffcc00 20px,
+        #333 20px,
+        #333 40px
+    );
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.warning-tape span {
+    display: inline-block;
+    background: #fff;
+    color: #333;
+    font-size: 24px;
+    font-weight: 900;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+/* ==========================================
+   マンガセクション
+   ========================================== */
+.manga-section {
+    background: #f9f9f9;
+    padding: 30px 0;
+}
+
+.manga-panel {
+    margin-bottom: 30px;
+}
+
+.manga-image-container img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.manga-placeholder {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    padding: 60px 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #666;
+    font-weight: 500;
+}
+
+.manga-placeholder.small {
+    padding: 40px 15px;
+    font-size: 14px;
+}
+
+/* 間違った勉強法セクション */
+.wrong-method {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.character-speech {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.character-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.character-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.speech-bubble {
+    background: #f0f0f0;
+    padding: 15px 20px;
+    border-radius: 15px;
+    position: relative;
+    flex-grow: 1;
+}
+
+.speech-bubble::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 20px;
+    border: 10px solid transparent;
+    border-right-color: #f0f0f0;
+    border-left: 0;
+}
+
+.speech-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.red-text {
+    color: #ff4444;
+    font-weight: 900;
+}
+
+.x-marks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.x-item {
+    background: #fff5f5;
+    border: 2px solid #ffcccc;
+    border-radius: 10px;
+    padding: 20px 15px;
+    text-align: center;
+}
+
+.x-mark {
+    font-size: 48px;
+    color: #ff4444;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.x-item p {
+    font-size: 14px;
+    font-weight: 700;
+    color: #666;
+}
+
+/* マンガパネルグリッド */
+.manga-panels-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.manga-panel-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 脳セクション */
+.brain-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.brain-image img {
+    max-width: 200px;
+}
+
+.brain-placeholder {
+    padding: 30px;
+}
+
+.brain-placeholder span {
+    font-size: 60px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.brain-placeholder p {
+    color: #666;
+    font-weight: 500;
+}
+
+/* ==========================================
+   なぜセクション
+   ========================================== */
+.why-section {
+    background: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.section-title.white {
+    color: #fff;
+}
+
+.why-content p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* ==========================================
+   実績セクション
+   ========================================== */
+.results-section {
+    background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.results-content {
+    margin-top: 20px;
+}
+
+.results-image img {
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.results-placeholder {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 60px 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* ==========================================
+   簡単セクション
+   ========================================== */
+.easy-section {
+    background: #f5f5f5;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.easy-grid {
+    display: grid;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.easy-item {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.easy-number {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+    color: #fff;
+    font-size: 24px;
+    font-weight: 900;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.easy-item h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.easy-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* ==========================================
+   脳科学セクション
+   ========================================== */
+.brain-science-section {
+    background: #fff;
+    padding: 50px 0;
+}
+
+.brain-explanation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.brain-diagram {
+    text-align: center;
+}
+
+.brain-diagram img {
+    max-width: 250px;
+}
+
+.brain-diagram-placeholder {
+    background: linear-gradient(135deg, #e8f4f8 0%, #d4e9f7 100%);
+    padding: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.brain-diagram-placeholder span {
+    font-size: 80px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.brain-diagram-placeholder p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.brain-text {
+    text-align: center;
+}
+
+.brain-text h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.brain-text p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* ==========================================
+   特典セクション
+   ========================================== */
+.benefits-section {
+    background: linear-gradient(135deg, #fff9e6 0%, #fff5d6 100%);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.benefits-list {
+    max-width: 400px;
+    margin: 30px auto 0;
+    text-align: left;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.check-mark {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.benefit-item p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* ==========================================
+   CTAセクション
+   ========================================== */
+.cta-section {
+    background: #f0f0f0;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.cta-section.cta-bottom {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+}
+
+.cta-box {
+    background: #fff;
+    padding: 40px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.cta-label {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ff4444;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 20px 40px;
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(255, 107, 53, 0.4);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(255, 107, 53, 0.5);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+.cta-notes {
+    margin-top: 20px;
+}
+
+.cta-notes p {
+    font-size: 13px;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* ==========================================
+   FAQセクション
+   ========================================== */
+.faq-section {
+    background: #fff;
+    padding: 50px 0;
+}
+
+.faq-list {
+    max-width: 500px;
+    margin: 30px auto 0;
+}
+
+.faq-item {
+    background: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #f0f0f0;
+}
+
+.q-mark, .a-mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.q-mark {
+    background: #ff6b35;
+    color: #fff;
+}
+
+.a-mark {
+    background: #4CAF50;
+    color: #fff;
+}
+
+.faq-question p {
+    flex-grow: 1;
+    font-weight: 700;
+    font-size: 15px;
+    color: #333;
+}
+
+.faq-toggle {
+    font-size: 24px;
+    color: #999;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 20px 20px;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.faq-item.active .faq-answer {
+    display: flex;
+}
+
+.faq-answer p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* ==========================================
+   フッター
+   ========================================== */
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    font-size: 12px;
+    color: #aaa;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.copyright {
+    font-size: 11px;
+    color: #666;
+}
+
+/* ==========================================
+   レスポンシブデザイン
+   ========================================== */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 18px;
+    }
+
+    .hero-badge {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    .warning-tape span {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+
+    .section-title {
+        font-size: 17px;
+    }
+
+    .x-marks {
+        grid-template-columns: 1fr;
+    }
+
+    .x-mark {
+        font-size: 36px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 18px 30px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 700px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .easy-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .brain-explanation {
+        flex-direction: row;
+    }
+
+    .brain-text {
+        text-align: left;
+    }
+}
+
+/* ==========================================
+   リップルエフェクト
+   ========================================== */
+.cta-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
